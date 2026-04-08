@@ -117,7 +117,7 @@ Includes Go toolchain and development tools:
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    base.url = "github:yourusername/nix-starter"; # or path:/path/to/this/flake
+    base.url = "github:lwileczek/nix-config"; # or path:/path/to/this/flake
   };
 
   outputs = { self, nixpkgs, flake-utils, base }:
@@ -163,7 +163,7 @@ Fast JavaScript/TypeScript toolchain powered by Bun and Rust-based tools:
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    base.url = "github:yourusername/nix-starter"; # or path:/path/to/this/flake
+    base.url = "github:lwileczek/nix-config"; # or path:/path/to/this/flake
   };
 
   outputs = { self, nixpkgs, flake-utils, base }:
@@ -198,7 +198,7 @@ Reference this flake as an input and use the `mkShell` function:
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    base.url = "github:yourusername/nix-starter"; # or path:/path/to/this/flake
+    base.url = "github:lwileczek/nix-config"; # or path:/path/to/this/flake
   };
 
   outputs = { self, nixpkgs, flake-utils, base }:
