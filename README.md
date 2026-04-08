@@ -285,7 +285,3 @@ The `mkShell` function accepts the following optional parameters:
 |-------|--------|
 | `nixpkgs` | `github:NixOS/nixpkgs/nixos-unstable` |
 | `flake-utils` | `github:numtide/flake-utils` |
-
-## License
-
-Unlicensed - Use as you wish for your own projects.
