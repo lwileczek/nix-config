@@ -13,8 +13,9 @@
       in
       {
         # Optional language-specific modules
-        lib.modules.go = import ./modules/go.nix { inherit pkgs; };
-        lib.modules.js = import ./modules/js.nix { inherit pkgs; };
+        lib.modules.go   = import ./modules/go.nix   { inherit pkgs; };
+        lib.modules.js   = import ./modules/js.nix   { inherit pkgs; };
+        lib.modules.rust = import ./modules/rust.nix { inherit pkgs; };
 
         # reusable library function
         lib.mkShell = { 
@@ -28,8 +29,9 @@
             # Helper to get packages for a module name using attrset lookup
             getModulePkgs = name: 
               {
-                go = self.lib.${system}.modules.go;
-                js = self.lib.${system}.modules.js;
+                go   = self.lib.${system}.modules.go;
+                js   = self.lib.${system}.modules.js;
+                rust = self.lib.${system}.modules.rust;
               }.${name} or [];
             # Collect all module packages
             modulePkgs = builtins.concatLists (map getModulePkgs modules);
