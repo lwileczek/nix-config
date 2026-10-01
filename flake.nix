@@ -71,7 +71,7 @@
           EDITOR      = env.EDITOR or "vim";
 
           shellHook = ''
-            alias ls='eza --icons --colour'
+            alias ls='eza --icons --colour=always'
             alias cat='bat'
             export GPG_TTY=$(tty)
             source ${pkgs.bash-completion}/etc/profile.d/bash_completion.sh
